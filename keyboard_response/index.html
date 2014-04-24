@@ -3,16 +3,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Welcome to today’s experiment!</title>
+		<title>Mouse tracking template</title>
 		<link rel="stylesheet" type="text/css" href="../style.css">
 	</head>
 	<body align = "center">
 
-		<h3>Welcome to today’s experiment!</h3>
-		<!-- This section is where all the stimuli will be presented during the experiment. -->
+		<h2>Study title</h2>
+
+		<!-- Hier findet die ganze Magie statt. -->
 		<div id='experiment' align = "center" ;
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-			<p id = 'textAboveProbe'>Please fill in the following information:</p>
+			<p id = 'textAboveProbe'>NOT Is this a word?</p>
 			<div id = 'probeHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
 				<p id = 'probeText' style="font-size:30px; font-weight:bold;">Hello</p> <!--This doesn't behave as it should for long text-->
 			</div>
@@ -22,36 +23,21 @@
 				N : Not a word.
 			</p>
 		</div>
+		<!-- Magie aus -->
 		
 		<!-- Instructions here are shown prior to begining the experiment. -->
-		<div id="meta" align = "left" ;
+		<div id="instructions" align = "center" ;
 		style="display:Inline; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p>
-            Year you were born:<br>
-            Field of study:<br>
-            Country of origin:<br>
-            Mother tongue: <br>
-            If you mother tongue is not German, please state how many years you have lived in a German-speaking country: <br>
-            </p>
+				Use this space to write instructions.<br>
+				You can use any HTML formatting you like in here.<br>
+				This section will be hidden when the participant clicks 'Begin'.
+			</p>
 			<p>
 				<button onclick="begin_experiment();">Begin</button>
 			</p>		
 		</div>
-
-		<div id="instructions" align = "left" ;
-		style="display:Inline; margin-right:100px; margin-left:100px; margin-top:100px;">
-			<p>
-            Year you were born:<br>
-            Field of study:<br>
-            Country of origin:<br>
-            Mother tongue: <br>
-            If you mother tongue is not German, please state how many years you have lived in a German-speaking country: <br>
-            </p>
-			<p>
-				<button onclick="begin_experiment();">Begin</button>
-			</p>		
-		</div>
-
+		
 		<!-- This section appears after the last trial. -->
 		<div id="debrief" align = "center" ;
 		style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
@@ -62,7 +48,7 @@
 			</p>	
 		</div>
 		
-		<div id="hidden_div" style = "Display: None;">
+		<div id="hidden_div" style = "display: none;">
 		<!-- 
 		Nothing within this section will be visable to participants.
 		Note the 'id' and 'name' values for each <input> below.
