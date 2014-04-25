@@ -74,25 +74,25 @@ function show_fixation(duration, flash) {
 function get_keyboard_response(keys_to_accept) {
     accepted_keys = keys_to_accept
     document.onkeydown = function(event) {
-	var key = String.fromCharCode(event.keyCode)
-	if(accepted_keys == undefined) {
-	    response = key
-	    log_response()
-	}
-	else {
-	    var key //= String.fromCharCode(event.keyCode)
-	    if (accepted_keys.indexOf(key) != -1) {
-		response = key
-		log_response()
-		//return response
-	    }
-	    else if (accepted_keys.indexOf(key.toLowerCase()) != -1) {
-		// In case acccepted_keys were given in lowercase.
-		response = key
-		log_response()
-		//return response
-	    };
-	};
+        var key = String.fromCharCode(event.keyCode)
+        if(accepted_keys == undefined) {
+            response = key
+            log_response()
+        }
+        else {
+            var key //= String.fromCharCode(event.keyCode)
+            if (accepted_keys.indexOf(key) != -1) {
+                response = key
+                log_response()
+                //return response
+            }
+            else if (accepted_keys.indexOf(key.toLowerCase()) != -1) {
+                // In case acccepted_keys were given in lowercase.
+                response = key
+                log_response()
+                //return response
+            };
+        };
     };
 };
 
@@ -137,10 +137,10 @@ function check_accuracy() {
     console.log('Given')
     console.log(response)
     if (response == correct_response) {
-	return true
+        return true
     }
     else {
-	return false
+        return false
     };
 };
 
@@ -151,11 +151,11 @@ function log_response() {
     try {clearTimeout(response_timeout);} catch(err){};
     feedback_delay = 0
     if(error_feedback) {
-	var correct = check_accuracy()
-	console.log(correct)
-	if (!correct) {
-	    give_feedback()
-	};
+        var correct = check_accuracy()
+        console.log(correct)
+        if (!correct) {
+            give_feedback()
+        };
     };
     console.log('Logging response: '+ response)
     for (var i=0; i < variables_to_log.length; i++) {
@@ -175,11 +175,11 @@ function give_feedback() {
 
 function next_trial(){
     if (trial_number < probes.length-1) {
-	trial_number++
-	trial_stage0(trial_number)
+        trial_number++
+        trial_stage0(trial_number)
     }
     else {
-	end_experiment();
+        end_experiment();
     };
 };
 
