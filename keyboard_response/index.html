@@ -30,13 +30,13 @@
 		style="margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'textAboveUserData'>Please fill in the following information:</p>
 			<div id = 'UserDataHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                <form id = "UserDataForm" style="display:inline;" name ="Output" method ="POST" action ="save_data.php">
-				Year you were born: <input id = "birthdayBox"    name = "birthday"><br>
-				Field of study: <input id = "studyfieldBox"    name = "studyfield"><br>
-				Country of origin: <input id = "countryBox"    name = "country"><br>
-				Mother tongue: <input id = "mothertongueBox"    name = "mothertongue"><br>
+                <form id = "UserDataForm" style="display:inline;" name ="Output" method ="POST" action ="save_UserData.php">
+				Year you were born: <input id = "birthdayBox" class = "question" name = "birthday"><br><br>
+				Field of study: <input id = "studyfieldBox" class = "question" name = "studyfield"><br><br>
+				Country of origin: <input id = "countryBox" class = "question" name = "country"><br><br>
+				Mother tongue: <input id = "mothertongueBox" class = "question" name = "mothertongue"><br><br>
 				If you mother tongue is not German, please state how many years you have lived in a German-speaking country:
-                <input id = "germanyearsBox"    name = "germanyears">
+                <input id = "germanyearsBox" class = "question" name = "germanyears">
 			</form><br><br>
 			<button onclick=" document.getElementById('userDataDiv').style.display = 'None';">Start Experiment</button>
 
