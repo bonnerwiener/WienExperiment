@@ -17,7 +17,7 @@ var error_feedback = false
 // variables to log
 var paradigm = 'press_key';
 var experiment_start_time = Date();
-var subject_nr = Math.floor(Math.random() * 99999999) + 1; // Pick a random number between 1 and 99999999
+var subject_nr 
 var trial_number = 0;
 var stimuli_number
 var anagram
