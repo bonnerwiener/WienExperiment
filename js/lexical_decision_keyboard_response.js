@@ -27,7 +27,7 @@ var rt
 
 // Do not change
 var random_order = generate_random_list(number_of_trials);
-var stim_number = random_order[trial_number];
+//var stim_number = random_order[trial_number];
 
 // Experiment logic - Adjust this as needed
 if(debug_mode){
