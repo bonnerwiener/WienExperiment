@@ -120,10 +120,10 @@ el.addEventListener("click", begin_experiment, false);
 
 // Experiment logic
 function begin_experiment() {
-    // remove UserData and show real experiment
-	document.getElementById('UserDataDiv').style.display = "None";
+    // remove Demographic and show real experiment
+	document.getElementById('DemographicDiv').style.display = "None";
 	document.getElementById('experiment').style.display = "Inline";
-    sendData(user_data_address, "#UserDataForm")
+    sendData(user_data_address, "#DemographicForm")
 	trial_stage0(trial_number)
 };
 
