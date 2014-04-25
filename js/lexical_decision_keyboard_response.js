@@ -1,6 +1,6 @@
 // Inter Trial Interval
 var ITI = 500 
-var number_of_trials = 40
+var number_of_trials = 9
 
 // pages to send results to
 var user_data_address = '../save_Demographic.php' 
