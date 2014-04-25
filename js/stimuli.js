@@ -20,9 +20,6 @@ codes = [
 	'consonants', 'consonants', 'consonants', 'consonants', 'consonants'
 	];
 
-var buttons = new Array('yes.png', 'no.png', 'start.png', 'next.png');
-var button_imgs = preload_images(buttons, '../images/')
-
 // If using error_feedback, you need to define the possible codes, and 
 // the correct response for each.
 var list_of_codes = new Array('common_word', 'rare_word','pseudo_word', 'consonants');
