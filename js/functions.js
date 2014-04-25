@@ -60,13 +60,13 @@ function hide_images(){
 function show_fixation(duration, flash) {
     flash = flash || false
     if (flash) {
-    	var pause = duration / 3
-	show_text('')
-	setTimeout("show_text('+');", pause)
-	setTimeout("show_text('');", pause*2)
+        var pause = duration / 3
+        show_text('')
+        setTimeout("show_text('+');", pause)
+        setTimeout("show_text('');", pause*2)
     }
     else {
-	show_text('+');
+        show_text('+');
     };
 };
 
@@ -113,7 +113,6 @@ function deactivate_response_buttons(list_of_button_ids) {
 	document.getElementById(button_id).onclick = function(){};
     };
 };
-
 
 // Experiment logic
 function begin_experiment() {
