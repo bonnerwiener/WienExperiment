@@ -116,9 +116,10 @@ function deactivate_response_buttons(list_of_button_ids) {
 
 // Experiment logic
 function begin_experiment() {
+    // remove UserData and show real experiment
 	document.getElementById('UserDataDiv').style.display = "None";
 	document.getElementById('experiment').style.display = "Inline";
-    sendData(user_data_address)
+    sendData(user_data_address, "#UserDataForm")
 	trial_stage0(trial_number)
 };
 
@@ -183,12 +184,13 @@ function next_trial(){
     };
 };
 
-function sendData(address){ // POSTs data in responseForm to the address given.
+// POSTs data into 'wichform' to the given 'address'
+function sendData(address, whichform){ 
     $.ajax({
 	    type: "POST",
-	    //url: "save_data.php",
 	    url: address,
-	    data: $("#UserDataForm").serialize(), // serializes the form's elements.
+        // serializes the form's elements.
+	    data: $(whichform).serialize(), 
 	    success: function(data)
 	    {
 	       console.log('data sent')
