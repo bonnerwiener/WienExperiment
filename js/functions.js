@@ -198,7 +198,8 @@ function sendData(address, whichform){
 	    data: $(whichform).serialize(), 
 	    success: function(data)
 	    {
-	       console.log('data sent')
+            subject_nr = data
+            console.log('data sent')
 	    }
     });
 };

@@ -11,7 +11,7 @@ include 'connect.php';
 //Insert variables into database
 mysql_query("INSERT INTO user_data (birthday, studyfield, country, mothertongue, germanyears) 
 VALUES ('$birthday', '$studyfield', '$country', '$mothertongue', '$germanyears');");
-
+echo mysql_insert_id();
 //Disconnect
 mysql_close($con);
 ?>
