@@ -118,6 +118,7 @@ function deactivate_response_buttons(list_of_button_ids) {
 function begin_experiment() {
 	document.getElementById('UserDataDiv').style.display = "None";
 	document.getElementById('experiment').style.display = "Inline";
+    sendData(user_data_address)
 	trial_stage0(trial_number)
 };
 
@@ -187,7 +188,7 @@ function sendData(address){ // POSTs data in responseForm to the address given.
 	    type: "POST",
 	    //url: "save_data.php",
 	    url: address,
-	    data: $("#responseForm").serialize(), // serializes the form's elements.
+	    data: $("#UserDataForm").serialize(), // serializes the form's elements.
 	    success: function(data)
 	    {
 	       console.log('data sent')

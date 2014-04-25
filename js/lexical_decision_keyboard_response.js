@@ -5,6 +5,7 @@
 // Settings you can vary
 var ITI = 500 // Inter Trial Interval
 var number_of_trials = 40
+var user_data_address = '../save_UserData.php' // Page to send results to.
 var data_address = '../save_data.php' // Page to send results to.
 var logging_box_ids = new Array('paradigmBox', 'timeBox', 'subjectBox', 'trialBox', 'stimuliBox', 'probeBox', 'codeBox', 'responseBox', 'rtBox');
 var variables_to_log = new Array('paradigm', 'experiment_start_time', 'subject_nr', 'trial_number', 'stimuli_number', 'probe', 'code', 'response', 'rt');
