@@ -10,14 +10,7 @@ $code = $_POST["code"];
 $response = $_POST["response"];
 $rt = $_POST["rt"];
 
-//Connect to database
-$host = "localhost";
-$database = "wienexp";
-$username = "wienexp";
-$password = "jahahijSympyutotPami";
-    
-$con = mysql_connect($host, $username, $password);
-mysql_select_db($database, $con) or die( "Unable to select database");
+include 'connect.php';
 
 //Insert variables into database
 mysql_query("INSERT INTO testexp (paradigm, time, subject, trial, probe, code, response, rt) 
