@@ -114,6 +114,10 @@ function deactivate_response_buttons(list_of_button_ids) {
     };
 };
 
+// add event listener to start button
+var el = document.getElementById("startbutton");
+el.addEventListener("click", begin_experiment, false);
+
 // Experiment logic
 function begin_experiment() {
     // remove UserData and show real experiment
@@ -165,6 +169,7 @@ function log_response() {
         document.getElementById(logging_box_id).value = window[variable_to_log]
     };
     sendData(data_address);
+    console.log("log_response")
     setTimeout(function(){next_trial();}, feedback_delay)
 };
 
