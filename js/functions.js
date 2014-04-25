@@ -98,19 +98,19 @@ function get_keyboard_response(keys_to_accept) {
 
 function activate_response_buttons(list_of_button_ids) {
     for (var i=0; i < list_of_button_ids.length; i++)  {
-	var button = document.getElementById(list_of_button_ids[i]);
-	console.log(i+button)
-	button.onclick = function(){
-	    response = this.innerHTML
-	    log_response();
-	};
+        var button = document.getElementById(list_of_button_ids[i]);
+        console.log(i+button)
+        button.onclick = function(){
+            response = this.innerHTML
+            log_response();
+        };
     };
 };
 
 function deactivate_response_buttons(list_of_button_ids) {
     for (var i=0; i < list_of_button_ids.length; i++)  {
-	var button_id = list_of_button_ids[i]
-	document.getElementById(button_id).onclick = function(){};
+        var button_id = list_of_button_ids[i]
+        document.getElementById(button_id).onclick = function(){};
     };
 };
 
@@ -159,9 +159,9 @@ function log_response() {
     };
     console.log('Logging response: '+ response)
     for (var i=0; i < variables_to_log.length; i++) {
-	var logging_box_id = logging_box_ids[i];
-	var variable_to_log = variables_to_log[i];
-	document.getElementById(logging_box_id).value = window[variable_to_log]
+        var logging_box_id = logging_box_ids[i];
+        var variable_to_log = variables_to_log[i];
+        document.getElementById(logging_box_id).value = window[variable_to_log]
     };
     sendData(data_address);
     setTimeout(function(){next_trial();}, feedback_delay)
@@ -244,14 +244,14 @@ function preload_images(image_names, directory) {
 function create_logging_form(formID, variables_list) {
     var form = document.getElementById(formID);
     for(var i=0; i < variables_list.length; i++){
-	var variable = variables_list[i]
-	var label = document.createTextNode(variable);
-	var inp = document.createElement("input");
-	inp.setAttribute('id', variable+'Box');
-	inp.setAttribute('name', variable+'Out');
-	var line = document.createElement('br');
-	form.appendChild(label);
-	form.appendChild(inp);
-	form.appendChild(line);
+        var variable = variables_list[i]
+        var label = document.createTextNode(variable);
+        var inp = document.createElement("input");
+        inp.setAttribute('id', variable+'Box');
+        inp.setAttribute('name', variable+'Out');
+        var line = document.createElement('br');
+        form.appendChild(label);
+        form.appendChild(inp);
+        form.appendChild(line);
     };
 };
