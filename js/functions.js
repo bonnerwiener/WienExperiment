@@ -116,7 +116,7 @@ function deactivate_response_buttons(list_of_button_ids) {
 
 // Experiment logic
 function begin_experiment() {
-	document.getElementById('userdata').style.display = "None";
+	document.getElementById('UserDataDiv').style.display = "None";
 	document.getElementById('experiment').style.display = "Inline";
 	trial_stage0(trial_number)
 };
