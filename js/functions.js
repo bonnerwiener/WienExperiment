@@ -180,7 +180,7 @@ function give_feedback() {
 };
 
 function next_trial(){
-    if (trial_number < probes.length-1) {
+    if (trial_number < anagrams.length-1) {
         trial_number++
         trial_stage0(trial_number)
     }

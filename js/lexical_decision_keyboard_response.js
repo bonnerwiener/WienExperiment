@@ -20,8 +20,8 @@ var experiment_start_time = Date();
 var subject_nr = Math.floor(Math.random() * 99999999) + 1; // Pick a random number between 1 and 99999999
 var trial_number = 0;
 var stimuli_number
-var probe
-var code
+var anagram
+var solution
 var response
 var rt
 
@@ -36,14 +36,14 @@ if(debug_mode){
 
 function trial_stage0() {
     stimuli_number = random_order[trial_number];
-    probe = probes[stimuli_number];
-    code = codes[stimuli_number];
+    anagram = anagrams[stimuli_number];
+    solution = solutions[stimuli_number];
     show_fixation(ITI);
     setTimeout("trial_stage1()", ITI);
 };
 
 function trial_stage1() {
     start_time = (Date.now());
-    show_text(probe);
+    show_text(anagram);
     get_keyboard_response('YN');
 };
