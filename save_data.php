@@ -20,8 +20,8 @@ $con = mysql_connect($host, $username, $password);
 mysql_select_db($database, $con) or die( "Unable to select database");
 
 //Insert variables into database
-mysql_query("INSERT INTO testexp (time, subject, trial, probe, code, response, rt) 
-VALUES ('$time', '$subject', '$trial', '$code', '$probe','$response', '$rt');");
+mysql_query("INSERT INTO testexp (paradigm, time, subject, trial, probe, code, response, rt) 
+VALUES ('$paradigm', '$time', '$subject', '$trial', '$code', '$probe','$response', '$rt');");
 
 //Disconnect
 mysql_close($con);
