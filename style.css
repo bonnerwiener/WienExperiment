@@ -1,3 +1,7 @@
+body{
+    text-align: center
+}
+
 .outerContainer {
     display: block;
     width: 100px; /* width of parent */
