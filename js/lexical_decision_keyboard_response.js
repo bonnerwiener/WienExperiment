@@ -101,7 +101,7 @@ document.getElementById("btnPresentation").addEventListener("click",
             document.getElementById('divPresentation').style.display = 'None';
             // TODO: use choosen decision from 0th screen
             if (true) {
-                document.getElementById('divToData').style.display = 'Inline';}
+                document.getElementById('divToDate').style.display = 'Inline';}
             else {
                 document.getElementById('divToGo').style.display = 'Inline';}
         },
@@ -135,7 +135,7 @@ function start_experiment() {
 document.getElementById("btnExperiment").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
-            if (round == 3 || round == 6) {
+            if (true || round == 3 || round == 6) {
                 document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divManipulation').style.display = 'Inline'; }
             else {
