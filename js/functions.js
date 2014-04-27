@@ -114,21 +114,9 @@ function deactivate_response_buttons(list_of_button_ids) {
     };
 };
 
-// add event listener to buttons
-document.getElementById("btnStart").addEventListener("click", begin_experiment, false);
-document.getElementById("btnContinue").addEventListener("click", begin_experiment, false);
-document.getElementById("btnHide").addEventListener("click", 
-        // clicking the button executes the following anonymus function to hide the 'hidden_div' container
-        function(){document.getElementById('hidden_div').style.display = 'None';},
-        false);
-
 
 // Experiment logic
 function begin_experiment() {
-    // remove Demographic and show real experiment
-	document.getElementById('divDemographic').style.display = "None";
-	document.getElementById('divInstructions').style.display = "Inline";
-    sendData(user_data_address, "#frmDemographic")
 	trial_stage0(trial_number)
 };
 

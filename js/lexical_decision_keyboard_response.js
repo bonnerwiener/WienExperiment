@@ -34,6 +34,87 @@ if(debug_mode){
     document.getElementById('hidden_div').style.display = 'Inline'
 };
 
+// add event listener to buttons
+document.getElementById("btnStart").addEventListener("click", 
+        // clicking the button executes the following anonymus function 
+        function() {
+            document.getElementById('divDemographic').style.display = 'None';
+            document.getElementById('divInstructions').style.display = 'Inline';
+            sendData(user_data_address, "#frmDemographic")
+        },
+        false)
+document.getElementById("btnContinue2").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divInstructions').style.display = 'None';
+            document.getElementById('divExamples').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue3").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divExamples').style.display = 'None';
+            document.getElementById('divQuestionnaire').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue4").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divQuestionnaire').style.display = 'None';
+            document.getElementById('divInstructions2').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue5").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divInstructions2').style.display = 'None';
+            document.getElementById('divIntrinsic').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue6").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divInstructions2').style.display = 'None';
+            document.getElementById('divExtrinsic').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue7").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divIntrinsic').style.display = 'None';
+            document.getElementById('divToGo').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue8").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divIntrinsic').style.display = 'None';
+            document.getElementById('divToDate').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue9").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divToGo').style.display = 'None';
+            document.getElementById('divInstructions3').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue10").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divInstructions3').style.display = 'None';
+            document.getElementById('divExperiment').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnContinue11").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divExperiment').style.display = 'None';
+            document.getElementById('divManipulation').style.display = 'Inline';
+        },
+        false);
+
+    
 function trial_stage0() {
     stimuli_number = random_order[trial_number];
     anagram = anagrams[stimuli_number];
