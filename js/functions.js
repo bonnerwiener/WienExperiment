@@ -114,9 +114,14 @@ function deactivate_response_buttons(list_of_button_ids) {
     };
 };
 
-// add event listener to start button
-var el = document.getElementById("startbutton");
-el.addEventListener("click", begin_experiment, false);
+// add event listener to buttons
+document.getElementById("btnStart").addEventListener("click", begin_experiment, false);
+document.getElementById("btnContinue").addEventListener("click", begin_experiment, false);
+document.getElementById("btnHide").addEventListener("click", 
+        // clicking the button executes the following anonymus function to hide the 'hidden_div' container
+        function(){document.getElementById('hidden_div').style.display = 'None';},
+        false);
+
 
 // Experiment logic
 function begin_experiment() {

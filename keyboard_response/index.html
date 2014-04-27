@@ -18,7 +18,7 @@
 				<p id = 'probeText' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
 			</div>
 			<p id = 'textBelowProbe'>
-				Please press space to continue. (oder was immer du willst)
+                <button id = "btnContinue">Weiter</button>
 			</p>
 		</div>
 		<!-- Magie aus -->
@@ -38,9 +38,9 @@
                 please state how many years you have lived in a German-speaking country:
                 <input id = "germanyearsBox" class = "question" name = "germanyears">
 			</form><br><br>
-			<button id = "startbutton">Start Experiment</button>
 
 			</div>
+			<button id = "btnStart">Start Experiment</button>
 		</div>
         <!-- Magie aus --> 
 
@@ -81,7 +81,7 @@
 				Response<input id = "responseBox"    name = "response"><br>
 				rt<input id = "rtBox"    name = "rt"><br><!--Shown response data-->
 			</form>
-			<button onclick=" document.getElementById('hidden_div').style.display = 'None';">Hide</button>
+            <button id = "btnHide">Hide</button>
 		</div>
 		<script src="../js/jquery-1.11.0.min.js"></script>
 		<script src="../js/stimuli.js"></script>
