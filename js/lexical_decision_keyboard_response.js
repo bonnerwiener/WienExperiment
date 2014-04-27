@@ -53,9 +53,18 @@ document.getElementById("btnInstructions").addEventListener("click",
 document.getElementById("btnExamples").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
-            // TODO: test if the examples are solved correctly
-            document.getElementById('divExamples').style.display = 'None';
-            document.getElementById('divQuestionnaire').style.display = 'Inline';
+            // TODO: show user if makes a mistake
+            if ($('#example1Box').val() == 'LION' &&
+                $('#example2Box').val() == 'BEAR' &&
+                $('#example3Box').val() == 'PUMA') {
+                console.log('LION is the correct answer');
+                // and the party goes on...
+                document.getElementById('divExamples').style.display = 'None';
+                document.getElementById('divQuestionnaire').style.display = 'Inline';
+            }
+            else {
+                console.log(document.getElementById('example1Box').value.concat(' is not the right answer'));
+            }
         },
         false);
 document.getElementById("btnQuestionnaire").addEventListener("click", 
