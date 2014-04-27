@@ -30,13 +30,29 @@
 			<p id = 'textAboveDemographic'>Please fill in the following information:</p>
 			<div id = 'DemographicHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
                 <form id = "DemographicForm" style="display:inline;" method ="POST" action ="save_Demographic.php">
-				Year you were born: <input id = "birthdayBox" class = "question" name = "birthday"><br><br>
-				Field of study: <input id = "studyfieldBox" class = "question" name = "studyfield"><br><br>
-				Country of origin: <input id = "countryBox" class = "question" name = "country"><br><br>
-				Mother tongue: <input id = "mothertongueBox" class = "question" name = "mothertongue"><br><br>
-                If you mother tongue is not German,<br>
-                please state how many years you have lived in a German-speaking country:
-                <input id = "germanyearsBox" class = "question" name = "germanyears">
+                <table width="100%" >
+                    <tr>
+                        <td> Year you were born: </td>
+                        <td style = "text-align: right;"> <input id = "birthdayBox" class = "question" name = "birthday"></td>
+                    </tr>
+                    <tr>
+                        <td>Field of study: </td>
+                        <td><input id = "studyfieldBox" class = "question" name = "studyfield"></td> 
+                    </tr>
+                    <tr>
+                        <td>Country of origin:</td>
+                        <td><input id = "countryBox" class = "question" name = "country"></td>
+                    </tr>
+                    <tr>
+                        <td>Mother tongue: </td>
+                        <td> <input id = "mothertongueBox" class = "question" name = "mothertongue"></td>
+                    </tr>
+                    <tr>
+                        <td>If you mother tongue is not German, please state how many years you have lived in a German-speaking country:</td>
+                        <td><input id = "germanyearsBox" class = "question" name = "germanyears"></td>
+                    </tr>
+                </table>
+
 			</form><br><br>
 
 			</div>
