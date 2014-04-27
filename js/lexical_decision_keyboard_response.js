@@ -43,14 +43,14 @@ document.getElementById("btnStart").addEventListener("click",
             sendData(user_data_address, "#frmDemographic")
         },
         false)
-document.getElementById("btnContinue2").addEventListener("click", 
+document.getElementById("btnInstructions").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions').style.display = 'None';
             document.getElementById('divExamples').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue3").addEventListener("click", 
+document.getElementById("btnExamples").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divExamples').style.display = 'None';
@@ -64,14 +64,14 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             document.getElementById('divInstructions2').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue4").addEventListener("click", 
+document.getElementById("btnInstructions2").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
             document.getElementById('divIntrinsic').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue5").addEventListener("click", 
+document.getElementById("btnIntrinsic").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divIntrinsic').style.display = 'None';
@@ -85,21 +85,21 @@ document.getElementById("btnContinue6").addEventListener("click",
             document.getElementById('divToGo').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue7").addEventListener("click", 
+document.getElementById("btnPresentation").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divToGo').style.display = 'None';
             document.getElementById('divInstructions3').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue8").addEventListener("click", 
+document.getElementById("btnToDate").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divToDate').style.display = 'None';
             document.getElementById('divInstructions3').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue9").addEventListener("click", 
+document.getElementById("btnInstructions3").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions3').style.display = 'None';
@@ -113,7 +113,7 @@ document.getElementById("btnContinue10").addEventListener("click",
             document.getElementById('divManipulation').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue11").addEventListener("click", 
+document.getElementById("btnManipulation").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divManipulation').style.display = 'None';
