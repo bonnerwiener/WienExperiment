@@ -11,13 +11,13 @@
 		<h2 style= "text-align: center">Chris Wien Experiment</h2>
 
 		<!-- Hier findet die ganze Magie statt. -->
-		<div id='experiment' align = "center"
+		<div id='divExperiment' align = "center"
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-			<p id = 'textAboveProbe' style="display:none">Kurzbeschreibung der Aktivität (die man über alle Trials sieht)</p>
-			<div id = 'probeHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-				<p id = 'probeText' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
+			<p id = 'txtAboveExperiment' style="display:none">Kurzbeschreibung der Aktivität (die man über alle Trials sieht)</p>
+			<div id = 'divExperimentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+				<p id = 'txtExperiment' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
 			</div>
-			<p id = 'textBelowProbe'>
+			<p id = 'txtBelowExperiment'>
                 <button id = "btnContinue">Weiter</button>
 			</p>
 		</div>
@@ -26,10 +26,10 @@
 
 
 		<!-- Fragebogen -->
-		<div id='DemographicDiv' align = "center" style="margin-right:100px; margin-left:100px; margin-top:50px;">
-			<p id = 'textAboveDemographic'>Please fill in the following information:</p>
-			<div id = 'DemographicHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                <form id = "DemographicForm" style="display:inline;" method ="POST" action ="save_Demographic.php">
+		<div id='divDemographic' align = "center" style="margin-right:100px; margin-left:100px; margin-top:50px;">
+			<p id = 'txtAboveDemographic'>Please fill in the following information:</p>
+			<div id = 'divDemographicHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                <form id = "frmDemographic" style="display:inline;" method ="POST" action ="save_Demographic.php">
                 <table width="100%" >
                     <tr>
                         <td> Year you were born: </td>
@@ -56,12 +56,12 @@
 			</div><br>
 			<button id = "btnStart">Start Experiment</button>
 		</div>
-        <!-- Magie aus --> 
+        <!-- Fragebogen ENDE --> 
 
 
 
 		<!-- This section appears after the last trial. -->
-		<div id="debrief" align = "center" style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
+		<div id="divDebrief" align = "center" style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p>
                 Thank you for your participation!<br>
                 Please contact the experimenter.

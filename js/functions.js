@@ -39,13 +39,13 @@ var feedback_delay;
 // Functions
 // Visuals
 function show_text(text) {
-	document.getElementById('probeText').innerHTML = text;
+	document.getElementById('txtExperiment').innerHTML = text;
 };
 function show_above(text) {
-	document.getElementById('textAboveProbe').innerHTML = text;
+	document.getElementById('txtAboveExperiment').innerHTML = text;
 };
 function show_below(text) {
-	document.getElementById('textBelowProbe').innerHTML = text;
+	document.getElementById('txtBelowExperiment').innerHTML = text;
 };
 function show_image(locationID, src) {
 	var this_image = document.getElementById(locationID)
@@ -126,15 +126,15 @@ document.getElementById("btnHide").addEventListener("click",
 // Experiment logic
 function begin_experiment() {
     // remove Demographic and show real experiment
-	document.getElementById('DemographicDiv').style.display = "None";
-	document.getElementById('experiment').style.display = "Inline";
-    sendData(user_data_address, "#DemographicForm")
+	document.getElementById('divDemographic').style.display = "None";
+	document.getElementById('divInstructions').style.display = "Inline";
+    sendData(user_data_address, "#frmDemographic")
 	trial_stage0(trial_number)
 };
 
 function end_experiment() {
-	document.getElementById('experiment').style.display = "None";
-	document.getElementById('debrief').style.display = "Inline";
+	document.getElementById('divExperiment').style.display = "None";
+	document.getElementById('divDebrief').style.display = "Inline";
 };
 
 
