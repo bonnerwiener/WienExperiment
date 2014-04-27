@@ -83,14 +83,15 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divIntrinsic').style.display = 'None';
-            document.getElementById('divToGo').style.display = 'Inline';
+            document.getElementById('divPresentation').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue6").addEventListener("click", 
+document.getElementById("btnExtrinsic").addEventListener("click", 
+        // TODO: magically (randomly) asign one of the 3 options
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
-            document.getElementById('divToGo').style.display = 'Inline';
+            document.getElementById('divPresentation').style.display = 'Inline';
         },
         false);
 document.getElementById("btnPresentation").addEventListener("click", 
@@ -126,7 +127,6 @@ document.getElementById("btnInstructions3").addEventListener("click",
             document.getElementById('divExperiment').style.display = 'Inline';
         },
         false);
-document.getElementById("btnContinue10").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divExperiment').style.display = 'None';
