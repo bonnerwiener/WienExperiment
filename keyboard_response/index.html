@@ -10,20 +10,6 @@
 
 		<h2 style= "text-align: center">Chris Wien Experiment</h2>
 
-		<!-- Hier findet die ganze Magie statt. -->
-		<div id='divExperiment' align = "center"
-		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-			<p id = 'txtAboveExperiment' style="display:none">Kurzbeschreibung der Aktivität (die man über alle Trials sieht)</p>
-			<div id = 'divExperimentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-				<p id = 'txtExperiment' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
-			</div>
-			<p id = 'txtBelowExperiment'>
-                <button id = "btnContinue">Weiter</button>
-			</p>
-		</div>
-		<!-- Magie aus -->
-
-
 
 		<!-- Fragebogen -->
 		<div id='divDemographic' align = "center" style="margin-right:100px; margin-left:100px; margin-top:50px;">
@@ -81,13 +67,185 @@ Your participation is voluntary. You can discontinue partcipation at any time.
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveExamples' style="display:none">Welcome instructions</p>
 			<div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                    With this experiment we examine your performance on solving anagrams.  An Anagram is a kind of word play. By rearranging a string of letters a meaningful word is produced, using all the original letters exactly once.  Here is an example: IONL -- LION The iniGal string of letters is not necessarily a proper word or needs to have a meaning.  Please do the following three examples to get acquainted with the task:
+                    With this experiment we examine your performance on solving anagrams.  An Anagram is a kind of word play. By rearranging a string of letters a meaningful word is produced, using all the original letters exactly once.  Here is an example: IONL -- LION The initial string of letters is not necessarily a proper word or needs to have a meaning.  Please do the following three examples to get acquainted with the task:
 			</div>
 			<p id = 'txtBelowExamples'>
                 <button id = "btnContinue3">Weiter</button>
 			</p>
 		</div>
 		<!-- Beispiele ENDE -->
+
+		<!-- Fragebogen 2 -->
+		<div id='divQuestionnaire' align = "center" style="margin-right:100px; margin-left:100px; margin-top:50px;">
+			<p id = 'txtAboveQuestionnaire'>Please fill in the following information:</p>
+			<div id = 'divQuestionnaireHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                <form id = "frmQuestionnaire" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+                <table width="100%" >
+                    <tr>
+                        <td> Year you were born: </td>
+                        <td> <input id = "question1Box" type="number" name = "birthday"></td>
+                    </tr>
+                    <tr>
+                        <td>Field of study: </td>
+                        <td><input id = "question2Box" type="text" name = "studyfield"></td> 
+                    </tr>
+                    <tr>
+                        <td>Country of origin:</td>
+                        <td><input id = "question3Box" type="text" name = "country"></td>
+                    </tr>
+                    <tr>
+                        <td>Mother tongue: </td>
+                        <td> <input id = "question4Box" type="text" name = "mothertongue"></td>
+                    </tr>
+                    <tr>
+                        <td>If you mother tongue is not German, please state how many years you have lived in a German-speaking country:</td>
+                        <td><input id = "question5Box" name = "germanyears"></td>
+                    </tr>
+                </table>
+			</form>
+			</div><br>
+			<button id = "btnQuestionnaire">Weiter</button>
+		</div>
+        <!-- Fragebogen ENDE --> 
+
+		<!-- Weitere Instruktionen 2-->
+		<div id='divInstructions2' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveInstructions2' style="display:none">Welcome instructions2</p>
+			<div id = 'divInstructionsHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                Your task during this experiment will be to finish 9 pages with 4 anagrams on each page.  You can only go to the next page if you have found the solution to all anagrams that are displayed on one screen.  We will measure your performance by taking the time for each page individually.  If you will not be able to solve all anagrams in a certain time, you will be able to go on to the next page without having found all anagrams. However, this will influence your overall performance rating.
+                The total amount of time (each page added up) will determine your total performance. AHer the experiment you will get feedback on your performance
+			</div>
+			<p id = 'txtBelowInstructions2'>
+                <button id = "btnContinue4">Weiter</button>
+			</p>
+		</div>
+		<!-- Weitere Instruktionen 2 ENDE -->
+
+
+		<!-- Intrinsisch -->
+		<div id='divIntrinsic' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveIntrinsic' style="display:none">Welcome Intrinsic</p>
+			<div id = 'divIntrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                We tried to make the task as favorable for our participants as possible. Therefore we wanted to give you the choice of anagrams you are working with.
+                Please select a set of words that you want to use for this task:
+                1. Man and his environment
+                2. Animals and nature
+                3. Things of everyday use
+			</div>
+			<p id = 'txtBelowIntrinsic'>
+                <button id = "btnContinue5">Weiter</button>
+			</p>
+		</div>
+		<!-- Intrinsisch ENDE -->
+
+
+		<!-- Extrinsisch -->
+		<div id='divExtrinsic' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveExtrinsic' style="display:none">Welcome Extrinsic</p>
+			<div id = 'divExtrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                We are using different categories of anagrams for the task. Here you can see all the possible categories.
+                1. Animals
+                2. Food
+                3. Body Parts
+                The computer will now randomly select a set of words that you are going to work with: Set of anagrams: (Predetermined choice, selected in the beginning of the experiment)
+			</div>
+			<p id = 'txtBelowExtrinsic'>
+                <button id = "btnContinue6">Weiter</button>
+			</p>
+		</div>
+		<!-- Extrinsisch ENDE -->
+
+
+        <!-- ToGo -->
+		<div id='divToGo' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveToGo' style="display:none">Welcome ToGo</p>
+			<div id = 'divToGoHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                We are about to start with the anagram task.
+                You will be presented with 4 anagrams per page. Your goal is to finish 9 pages as quickly as possible.
+                A status bar will indicate your progress. It will inform you how many pages you have already completed.
+                This status bar indicates that two pages have already been completed:
+
+                To test your understanding of the progress bar, please tell us how many pages you have already completed by looking at the bar:
+                n
+                “I have completed ____ pages.”
+			</div>
+			<p id = 'txtBelowToGo'>
+                <button id = "btnContinue7">Weiter</button>
+			</p>
+		</div>
+		<!-- ToGo ENDE -->
+        
+        
+        <!-- ToDate -->
+		<div id='divToDate' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveToDate' style="display:none">Welcome ToDate</p>
+			<div id = 'divToDateHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                We are about to start with the anagram task.
+                You will be presented with n anagrams per page. Your goal is to finish 9 pages as quickly as possible.
+                A status bar will indicate your progress. It will inform you how many pages you have le@.
+                This status bar indicates that two pages are le@ to finish the task:
+                n
+                To test your understanding of the progress bar, please tell us how many pages you have le@ by looking at the bar:
+                n
+                “I have ____ pages le@.”
+			</div>
+			<p id = 'txtBelowToDate'>
+                <button id = "btnContinue8">Weiter</button>
+			</p>
+		</div>
+		<!-- ToDate ENDE -->
+
+
+        <!-- Weitere Instruktionen 3-->
+		<div id='divInstructions3' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveInstructions3' style="display:none">Welcome instructions3</p>
+			<div id = 'divInstructionsHolder3' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 3px solid">
+                The anagram task will now start.
+                Please remember that your goal is finishing 9 pages. The time will be measured for each page.
+                The total amount of time (each page added up) will determine your total performance. Please try to be as quick as possible for each page.
+			</div>
+			<p id = 'txtBelowInstructions3'>
+                <button id = "btnContinue9">Weiter</button>
+			</p>
+		</div>
+		<!-- Weitere Instruktionen 3 ENDE -->
+
+
+		<!-- Hier findet die ganze Magie statt. -->
+		<div id='divExperiment' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveExperiment' style="display:none">Kurzbeschreibung der Aktivität (die man über alle Trials sieht)</p>
+			<div id = 'divExperimentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+				<p id = 'txtExperiment' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
+			</div>
+			<p id = 'txtBelowExperiment'>
+                <button id = "btnContinue10">Weiter</button>
+			</p>
+		</div>
+		<!-- Magie aus -->
+
+		<!-- Manipulationscheck -->
+		<div id='divManipulation' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAboveManipulation' style="display:none">Kurzbeschreibung der Aktivität (die man über alle Trials sieht)</p>
+			<div id = 'divManipulationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+				<p id = 'txtManipulation' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
+			</div>
+			<p id = 'txtBelowManipulation'>
+                <button id = "btnContinue11">Weiter</button>
+			</p>
+		</div>
+		<!-- Magie aus -->
+
+
+
+
 
 
 		<!-- This section appears after the last trial. -->
