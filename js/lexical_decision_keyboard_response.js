@@ -124,13 +124,23 @@ document.getElementById("btnInstructions3").addEventListener("click",
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions3').style.display = 'None';
-            document.getElementById('divExperiment').style.display = 'Inline';
+            start_experiment();
         },
         false);
+
+function start_experiment() {
+    document.getElementById('divExperiment').style.display = 'Inline';
+}
+
+document.getElementById("btnExperiment").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
-            document.getElementById('divExperiment').style.display = 'None';
-            document.getElementById('divManipulation').style.display = 'Inline';
+            if (round == 3 || round == 6) {
+                document.getElementById('divExperiment').style.display = 'None';
+                document.getElementById('divManipulation').style.display = 'Inline'; }
+            else {
+                //TODO: Clear screen, and present new series of anagrams
+            }
         },
         false);
 document.getElementById("btnManipulation").addEventListener("click", 
