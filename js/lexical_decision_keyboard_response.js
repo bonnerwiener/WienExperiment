@@ -53,6 +53,7 @@ document.getElementById("btnInstructions").addEventListener("click",
 document.getElementById("btnExamples").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
+            // TODO: test if the examples are solved correctly
             document.getElementById('divExamples').style.display = 'None';
             document.getElementById('divQuestionnaire').style.display = 'Inline';
         },
@@ -62,16 +63,23 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
         function() {
             document.getElementById('divQuestionnaire').style.display = 'None';
             document.getElementById('divInstructions2').style.display = 'Inline';
+            // TODO: save Answers of Radio Buttons 
+            // e.g. $('input[name=gender]:checked').val();
         },
         false);
 document.getElementById("btnInstructions2").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
-            document.getElementById('divIntrinsic').style.display = 'Inline';
+            // TODO: intrinsic or extrinsic is the question...
+            if (true) {
+                document.getElementById('divIntrinsic').style.display = 'Inline';}
+            else {
+                document.getElementById('divExtrinsic').style.display = 'Inline';}
         },
         false);
 document.getElementById("btnIntrinsic").addEventListener("click", 
+        // TODO: here has to happen some magic, to select option 1,2 or 3
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divIntrinsic').style.display = 'None';
@@ -86,6 +94,18 @@ document.getElementById("btnContinue6").addEventListener("click",
         },
         false);
 document.getElementById("btnPresentation").addEventListener("click", 
+        // TODO: magically (randomly) asign one of the 3 options
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('divPresentation').style.display = 'None';
+            // TODO: use choosen decision from 0th screen
+            if (true) {
+                document.getElementById('divToData').style.display = 'Inline';}
+            else {
+                document.getElementById('divToGo').style.display = 'Inline';}
+        },
+        false);
+document.getElementById("btnToGo").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divToGo').style.display = 'None';
