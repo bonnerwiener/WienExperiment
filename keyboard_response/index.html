@@ -2,18 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Chris Wien Experiment</title>
+		<title>Experiment Mot_A</title>
 		<link rel="stylesheet" type="text/css" href="../style.css">
 	</head>
 	<body>
 
-		<h2 style= "text-align: center">Chris Wien Experiment</h2>
+		<h2 style= "text-align: center">Experiment Mot_A</h2>
 
 
         <!-- Treatmentwahl -->
         <div id='divTreatment' align = "center"
             style="display: inline; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveTreatment' style="display:inline">Choose Treatment</p>
+            <p id = 'txtAboveTreatment' style="display:inline">Auswahl Kondition</p>
             <div id = 'divTreatmentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
                 <form id = "frmTreatment" style="display:inline;" method ="POST" action ="save_Demographic.php">
                     <input type="radio" name="rdTreatment" value="0">2goExt</br>
@@ -62,6 +62,10 @@
                         <td>Wenn ihre Muttesprache nicht Deutsch ist, bitte geben Sie an wie viele Jahre Sie in einem deutsprachigen Land gelebt haben:</td>
                         <td><input id = "germanyearsBox" name = "germanyears"></td>
                     </tr>
+                    <tr>
+                        <td>Wurde bei Ihnen eine diagnostische Entwicklungsstörung der Sprache oder der schulischen Fertigkeiten diagnostiziert (z.B. Lese- Rechtschreibschwäche)? (Auswahl Ja / Nein)</td>
+                        <td><input id = "germanyearsBox" name = "germanyears"></td>
+                    </tr>
                 </table>
 			</form>
 			</div><br>
@@ -93,11 +97,14 @@ Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erhebe
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveExamples' style="display:none">Some examples</p>
 			<div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                With this experiment we examine your performance on solving anagrams.  An Anagram is a kind of word play. By rearranging a string of letters a meaningful word is produced, using all the original letters exactly once.  <br>
+                Das heutige Experiment untersucht ihre Leistung bei der Lösung von Worträtseln. 
+                Bei den Worträtseln handelt es sich um Buchstaben, die durch Umstellen der Reihenfolge ein sinnvolles Wort ergeben. 
+                Jeder Buchstabe wird dabei nur einmal verwendet. <br>
                 
-                Here is an example: IONL -- LION <br>
+                Hier ist ein Beispiel:  smesre  -- messer <br>
                 
-                The initial string of letters is not necessarily a proper word or needs to have a meaning.  Please do the following three examples to get acquainted with the task:<br><br>
+                Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden. 
+                Bitte versuchen Sie die folgenden Beispiele zu lösen, um sich mit der Aufgabe vertraut zu machen.<br><br>
 
                 <table width="100%" >
                     <tr>
@@ -216,14 +223,112 @@ Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erhebe
 			<button id = "btnQuestionnaire">Weiter</button>
 		</div>
         <!-- Fragebogen ENDE --> 
+        
+        <!-- Fragebogen 3 - Was muss ich alles verändern damit nichts überschrieben wird? -->
+		<div id='divQuestionnaire' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
+			<p id = 'txtAboveQuestionnaire'>Please choose some answers</p>
+			<div id = 'divQuestionnaireHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                <form id = "frmQuestionnaire" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                            </tr>
+                        </thead>
+                        <tr align = "center">
+                            <th id="question1">I enjoyed doing this activity very much</th>
+                            <td><input type="radio" name="q1" value="1"></td>
+                            <td><input type="radio" name="q1" value="2"></td>
+                            <td><input type="radio" name="q1" value="3"></td>
+                            <td><input type="radio" name="q1" value="4"></td>
+                            <td><input type="radio" name="q1" value="5"></td>
+                            <td><input type="radio" name="q1" value="6"></td>
+                            <td><input type="radio" name="q1" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>This activity was fun to do.</th>
+                            <td><input type="radio" name="q2" value="1"></td>
+                            <td><input type="radio" name="q2" value="2"></td>
+                            <td><input type="radio" name="q2" value="3"></td>
+                            <td><input type="radio" name="q2" value="4"></td>
+                            <td><input type="radio" name="q2" value="5"></td>
+                            <td><input type="radio" name="q2" value="6"></td>
+                            <td><input type="radio" name="q2" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>I thought this was a boring activity</th>
+                            <td><input type="radio" name="q3" value="1"></td>
+                            <td><input type="radio" name="q3" value="2"></td>
+                            <td><input type="radio" name="q3" value="3"></td>
+                            <td><input type="radio" name="q3" value="4"></td>
+                            <td><input type="radio" name="q3" value="5"></td>
+                            <td><input type="radio" name="q3" value="6"></td>
+                            <td><input type="radio" name="q3" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>This activity did not hold my attention at all</th>
+                            <td><input type="radio" name="q4" value="1"></td>
+                            <td><input type="radio" name="q4" value="2"></td>
+                            <td><input type="radio" name="q4" value="3"></td>
+                            <td><input type="radio" name="q4" value="4"></td>
+                            <td><input type="radio" name="q4" value="5"></td>
+                            <td><input type="radio" name="q4" value="6"></td>
+                            <td><input type="radio" name="q4" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>I would describe this activity as very interesting</th>
+                            <td><input type="radio" name="q5" value="1"></td>
+                            <td><input type="radio" name="q5" value="2"></td>
+                            <td><input type="radio" name="q5" value="3"></td>
+                            <td><input type="radio" name="q5" value="4"></td>
+                            <td><input type="radio" name="q5" value="5"></td>
+                            <td><input type="radio" name="q5" value="6"></td>
+                            <td><input type="radio" name="q5" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>I thought this activity was quite enjoyable</th>
+                            <td><input type="radio" name="q6" value="1"></td>
+                            <td><input type="radio" name="q6" value="2"></td>
+                            <td><input type="radio" name="q6" value="3"></td>
+                            <td><input type="radio" name="q6" value="4"></td>
+                            <td><input type="radio" name="q6" value="5"></td>
+                            <td><input type="radio" name="q6" value="6"></td>
+                            <td><input type="radio" name="q6" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>While I was doing this activity, I was thinking about how much I enjoyed it</th>
+                            <td><input type="radio" name="q7" value="1"></td>
+                            <td><input type="radio" name="q7" value="2"></td>
+                            <td><input type="radio" name="q7" value="3"></td>
+                            <td><input type="radio" name="q7" value="4"></td>
+                            <td><input type="radio" name="q7" value="5"></td>
+                            <td><input type="radio" name="q7" value="6"></td>
+                            <td><input type="radio" name="q7" value="7"></td>
+                        </tr>
+                    </table>
+                </form>
+			</div><br>
+			<button id = "btnQuestionnaire">Weiter</button>
+		</div>
+        <!-- Fragebogen ENDE --> 
+
 
 		<!-- Weitere Instruktionen 2-->
 		<div id='divInstructions2' align = "center"
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveInstructions2' style="display:none">Welcome instructions2</p>
 			<div id = 'divInstructionsHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                Your task during this experiment will be to finish 9 pages with 4 anagrams on each page.  You can only go to the next page if you have found the solution to all anagrams that are displayed on one screen.  We will measure your performance by taking the time for each page individually.  If you will not be able to solve all anagrams in a certain time, you will be able to go on to the next page without having found all anagrams. However, this will influence your overall performance rating.
-                The total amount of time (each page added up) will determine your total performance. AHer the experiment you will get feedback on your performance
+                Ihre Aufgabe wird es sein alle Worträtsel in möglichst kurzer Zeit zu lösen. Insgesamt werden Ihnen 9 Seiten mit jeweils 8 Rätseln vorgegeben.
+                Die Zeit wird dabei für jede Seite einzeln gemessen. Sie können mit der Bearbeitung nur fortfahren, wenn Sie alle Lösungen auf einer Seite gefunden haben.
+                Sollten Sie einmal keine Lösung für ein Rätsel finden, wird Ihnen nach einiger Zeit angeboten mit der nächsten Seite fortzufahren.
+
 			</div>
 			<p id = 'txtBelowInstructions2'>
                 <button id = "btnInstructions2">Weiter</button>
@@ -237,12 +342,13 @@ Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erhebe
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveIntrinsic' style="display:none">Welcome Intrinsic</p>
 			<div id = 'divIntrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                We tried to make the task as favorable for our participants as possible. Therefore we wanted to give you the choice of anagrams you are working with.
-                Please select a set of words that you want to use for this task:</br></br>
+                Die Bearbeitung der Aufgaben soll dabei möglichst gut auf Ihre Interessen zugeschnitten sein. Daher können Sie nun eine von drei Rätselkategorien wählen.
+                Die Worträtsel werden alle diesem Oberthema zuzuordnen sein.
+                Bitte wählen Sie eine der Kategorien aus:</br></br>
                 <form id = "frmIntrinsic" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <input type="radio" name="rdIntrinsic" value="1">1. Man and his environment</br>
-                    <input type="radio" name="rdIntrinsic" value="2">2. Animals and nature</br>
-                    <input type="radio" name="rdIntrinsic" value="3">3. Things of everyday use</br>
+                    <input type="radio" name="rdIntrinsic" value="1">1. Menschen und ihre Umgebung</br>
+                    <input type="radio" name="rdIntrinsic" value="2">2. Natur und Tiere</br>
+                    <input type="radio" name="rdIntrinsic" value="3">3. Technik und Gebrauchsgegenstände</br>
                 </form>
 			</div>
 			<p id = 'txtBelowIntrinsic'>
@@ -257,11 +363,12 @@ Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erhebe
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveExtrinsic' style="display:none">Welcome Extrinsic</p>
 			<div id = 'divExtrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                We are using different categories of anagrams for the task. Here you can see all the possible categories.</br></br>
-                1. Animals</br>
-                2. Food</br>
-                3. Body Parts</br></br>
-                The computer will now randomly select a set of words that you are going to work with: Set of anagrams: (Predetermined choice, selected in the beginning of the experiment)
+                Es gibt drei verschiedene Worträtselkategorien. Alle Rätsel werden diesem Oberthema zuzuordnen sein. 
+                Hier sehen Sie die möglichen Kategorien: </br></br>
+                1. Menschen und ihre Umgebung<</br>
+                2. Natur und Tiere</br>
+                3. Technik und Gebrauchsgegenstände</br></br>
+                Der Computer wird Ihnen nun automatisch ein Thema zuweisen.
 			</div>
 			<p id = 'txtBelowExtrinsic'>
                 <button id = "btnExtrinsic">Weiter</button>
@@ -270,7 +377,43 @@ Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erhebe
 		<!-- Extrinsisch ENDE -->
 
 
-		<!-- Präsentation der Auswahl -->
+		<!-- Präsentation der Auswahl Menschen und ihre Umgebung -->
+		<div id='divPresentation' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAbovePresentation' style="display:none">Presentation of anagram task</p>
+			<div id = 'divPresentationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                Ihnen wurde die Kategorie "Menschen und ihre Umwelt" zugewiesen.
+                Unter diese Kategorie fallen:
+                - Nahrungsmittel (z.B. Früchte)
+                - Unterhaltung (z.B. Sportarten)
+                - Bezeichnungen für Menschen (z.B. Tante, Onkel, etc.)
+                - Elemente der Gesellschaft und Kultur (z.B. Finanzen, menschliche Tugenden)
+			</div>
+			<p id = 'txtBelowPresentation'>
+                <button id = "btnPresentation">Weiter</button>
+			</p>
+		</div>
+		<!-- Präsentation der Auswahl Menschen und ihre Umgebung ENDE -->
+
+		<!-- Präsentation der Auswahl Natur und Tiere-->
+		<div id='divPresentation' align = "center"
+		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+			<p id = 'txtAbovePresentation' style="display:none">Presentation of anagram task</p>
+			<div id = 'divPresentationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
+                Ihnen wurde die Kategorie "Natur und Tiere" zugewiesen.
+                Unter diese Kategorie fallen:
+                - Tierarten
+                - Pflanzen 
+                - natürliche Lebensmittel (z.B. Weizen)
+                - natürliche Phänomene (z.B. Blitz)
+			</div>
+			<p id = 'txtBelowPresentation'>
+                <button id = "btnPresentation">Weiter</button>
+			</p>
+		</div>
+		<!-- Präsentation der Auswahl Natur und Tiere ENDE -->
+		
+		<!-- Präsentation der Auswahl Technik und Gebrauchsgegenstände-->
 		<div id='divPresentation' align = "center"
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAbovePresentation' style="display:none">Presentation of anagram task</p>
@@ -281,8 +424,7 @@ Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erhebe
                 <button id = "btnPresentation">Weiter</button>
 			</p>
 		</div>
-		<!-- Präsentation der Auswahl ENDE -->
-
+		<!-- Präsentation der Auswahl Technik und Gebrauchsgegenstände ENDE -->
 
         <!-- ToGo -->
 		<div id='divToGo' align = "center"
