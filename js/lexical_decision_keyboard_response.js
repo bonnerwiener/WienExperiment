@@ -118,7 +118,7 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         false);
 document.getElementById("btnExtrinsic").addEventListener("click", 
         // TODO: magically (randomly) asign one of the 3 options
-        // clicking the button executes the following anonymus function
+        // nicer text + choice
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
             document.getElementById('divPresentation').style.display = 'Inline';
@@ -165,7 +165,7 @@ document.getElementById("btnExperiment").addEventListener("click",
                 document.getElementById('divManipulation').style.display = 'Inline'; }
             else {
                 //TODO: Clear screen, and present new series of anagrams
-            }
+            }        
         },
         false);
 document.getElementById("btnManipulation").addEventListener("click", 
