@@ -70,10 +70,15 @@ document.getElementById("btnExamples").addEventListener("click",
 document.getElementById("btnQuestionnaire").addEventListener("click", 
         // clicking the button executes the following anonymus function
         function() {
+            // TODO: save all Answers of Radio Buttons 
+            var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
+            // ... for ...; sendData()...;
+            // TODO: replace questions OR make some other questionaires
+            // ...  frmQuestionaire.question1 = 'some new question' oder so...
+            
+            // show next stage
             document.getElementById('divQuestionnaire').style.display = 'None';
             document.getElementById('divInstructions2').style.display = 'Inline';
-            // TODO: save Answers of Radio Buttons 
-            // e.g. $('input[name=gender]:checked').val();
         },
         false);
 document.getElementById("btnInstructions2").addEventListener("click", 
