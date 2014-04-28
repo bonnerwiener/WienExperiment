@@ -57,7 +57,6 @@ document.getElementById("btnTreatment").addEventListener("click",
         },
         false)
 document.getElementById("btnStart").addEventListener("click", 
-        // clicking the button executes the following anonymus function 
         function() {
             document.getElementById('divDemographic').style.display = 'None';
             document.getElementById('divInstructions').style.display = 'Inline';
@@ -65,14 +64,12 @@ document.getElementById("btnStart").addEventListener("click",
         },
         false)
 document.getElementById("btnInstructions").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions').style.display = 'None';
             document.getElementById('divExamples').style.display = 'Inline';
         },
         false);
 document.getElementById("btnExamples").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             // TODO: show user if makes a mistake
             if ($('#example1Box').val() == 'LION' &&
@@ -89,7 +86,6 @@ document.getElementById("btnExamples").addEventListener("click",
         },
         false);
 document.getElementById("btnQuestionnaire").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             // TODO: save all Answers of Radio Buttons 
             var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
@@ -103,7 +99,6 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
         },
         false);
 document.getElementById("btnInstructions2").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
             // TODO: intrinsic or extrinsic is the question...
@@ -131,7 +126,6 @@ document.getElementById("btnExtrinsic").addEventListener("click",
         false);
 document.getElementById("btnPresentation").addEventListener("click", 
         // TODO: magically (randomly) asign one of the 3 options
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divPresentation').style.display = 'None';
             // TODO: use choosen decision from 0th screen
@@ -142,21 +136,18 @@ document.getElementById("btnPresentation").addEventListener("click",
         },
         false);
 document.getElementById("btnToGo").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divToGo').style.display = 'None';
             document.getElementById('divInstructions3').style.display = 'Inline';
         },
         false);
 document.getElementById("btnToDate").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divToDate').style.display = 'None';
             document.getElementById('divInstructions3').style.display = 'Inline';
         },
         false);
 document.getElementById("btnInstructions3").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divInstructions3').style.display = 'None';
             start_experiment();
@@ -168,7 +159,6 @@ function start_experiment() {
 }
 
 document.getElementById("btnExperiment").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             if (true || round == 3 || round == 6) {
                 document.getElementById('divExperiment').style.display = 'None';
@@ -179,7 +169,6 @@ document.getElementById("btnExperiment").addEventListener("click",
         },
         false);
 document.getElementById("btnManipulation").addEventListener("click", 
-        // clicking the button executes the following anonymus function
         function() {
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divDebrief').style.display = 'Inline';
