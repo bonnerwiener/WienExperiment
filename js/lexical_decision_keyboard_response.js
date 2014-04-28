@@ -165,6 +165,9 @@ document.getElementById("btnExperiment").addEventListener("click",
             if (true || round == 3 || round == 6) {
                 document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divManipulation').style.display = 'Inline'; }
+            else if (round == 9){
+                document.getElementById('divDebrief').style.display = 'Inline';
+            }
             else {
                 //TODO: Clear screen, and present new series of anagrams
             }        
@@ -173,7 +176,7 @@ document.getElementById("btnExperiment").addEventListener("click",
 document.getElementById("btnManipulation").addEventListener("click", 
         function() {
             document.getElementById('divManipulation').style.display = 'None';
-            document.getElementById('divDebrief').style.display = 'Inline';
+                document.getElementById('divExperiment').style.display = 'Inline';
         },
         false);
 
