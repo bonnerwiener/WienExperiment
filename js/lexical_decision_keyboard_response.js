@@ -24,6 +24,7 @@ var anagram
 var solution
 var response
 var rt
+var treatment
 
 // Do not change
 var random_order = generate_random_list(number_of_trials);
@@ -35,6 +36,26 @@ if(debug_mode){
 };
 
 // add event listener to buttons
+document.getElementById("btnHide").addEventListener("click", 
+        // clicking the button executes the following anonymus function
+        function() {
+            document.getElementById('hidden_div').style.display = 'None';
+        },
+        false)
+document.getElementById("btnTreatment").addEventListener("click", 
+        function() {
+            treatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val()
+            if( treatment == undefined)
+            {
+                console.log('Please check one of the treatments');
+            }
+            else {
+                console.log('everything fine, choose -> '.concat(treatment));
+                document.getElementById('divTreatment').style.display = 'None';
+                document.getElementById('divDemographic').style.display = 'Inline';
+            }
+        },
+        false)
 document.getElementById("btnStart").addEventListener("click", 
         // clicking the button executes the following anonymus function 
         function() {
