@@ -101,18 +101,19 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
 document.getElementById("btnInstructions2").addEventListener("click", 
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
-            // TODO: intrinsic or extrinsic is the question...
-            if (true) {
-                document.getElementById('divIntrinsic').style.display = 'Inline';}
-            else {
+            if (treatment == 1 || treatment == 3) {
+                document.getElementById('divIntrinsic').style.display = 'Inline';
+            }
+            else if(treatment == 0 || treatment == 2) {
                 document.getElementById('divExtrinsic').style.display = 'Inline';}
         },
         false);
 document.getElementById("btnIntrinsic").addEventListener("click", 
-        // TODO: here has to happen some magic, to select option 1,2 or 3
-        // clicking the button executes the following anonymus function
+        // TODO: here has to happen some magic, to select option 1,2 or 3 (keyboard/Radiobutton?)
+        // nicer text + choice
         function() {
             document.getElementById('divIntrinsic').style.display = 'None';
+            $('#divPresentationHolder').text('Intrinsic Choice: ');
             document.getElementById('divPresentation').style.display = 'Inline';
         },
         false);
@@ -121,6 +122,7 @@ document.getElementById("btnExtrinsic").addEventListener("click",
         // nicer text + choice
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
+            $('#divPresentationHolder').text('Extrinsic Choice: ');
             document.getElementById('divPresentation').style.display = 'Inline';
         },
         false);
