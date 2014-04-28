@@ -71,10 +71,10 @@ document.getElementById("btnInstructions").addEventListener("click",
         false);
 document.getElementById("btnExamples").addEventListener("click", 
         function() {
-            // TODO: show user if makes a mistake
-            if ($('#example1Box').val() == 'LION' &&
-                $('#example2Box').val() == 'BEAR' &&
-                $('#example3Box').val() == 'PUMA') {
+            // TODO: show user if she makes a mistake
+            if ($('#example1Box').val().toUpperCase() == 'LION' &&
+                $('#example2Box').val().toUpperCase() == 'BEAR' &&
+                $('#example3Box').val().toUpperCase() == 'PUMA') {
                 console.log('LION is the correct answer');
                 // and the party goes on...
                 document.getElementById('divExamples').style.display = 'None';
