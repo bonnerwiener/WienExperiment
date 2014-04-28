@@ -163,12 +163,13 @@ function start_experiment() {
 
 document.getElementById("btnExperiment").addEventListener("click", 
         function() {
-            if (true || round == 3 || round == 6) {
             trial_number++;
             $('#txtExperiment').text('Round '.concat(trial_number));
+            if (trial_number == 3 || trial_number == 6) {
                 document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divManipulation').style.display = 'Inline'; }
-            else if (round == 9){
+            else if (trial_number == 9){
+                document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divDebrief').style.display = 'Inline';
             }
             else {
