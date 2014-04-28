@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -31,28 +30,36 @@
 
 		<!-- Fragebogen -->
 		<div id='divDemographic' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-			<p id = 'txtAboveDemographic'>Please fill in the following information:</p>
+			<p id = 'txtAboveDemographic'>Bevor Sie mit dem Experiment anfangen können, bitten wir Sie die folgenden Fragen zu Ihrer Person zu beantworten:</p>
 			<div id = 'divDemographicHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
                 <form id = "frmDemographic" style="display:inline;" method ="POST" action ="save_Demographic.php">
                 <table width="100%" >
                     <tr>
-                        <td> Year you were born: </td>
+                        <td>Alter: </td>
                         <td> <input id = "birthdayBox" type="number" name = "birthday"></td>
                     </tr>
                     <tr>
-                        <td>Field of study: </td>
+                        <td>Höchste abgeschlossene Ausbildung: (Dropdown möglich?) </td>
+                        <td><input id = "educationBox" type="text" name = "education"></td> 
+                    </tr>
+                    <tr>
+                        <td>Sind Sie derzeit Student oder haben Sie ein Studium abgeschlossen? (Auswahl Ja / Nein) </td>
+                        <td><input id = "studentBox" type="text" name = "student"></td> 
+                    </tr>
+                    <tr>
+                        <td>Bitte geben Sie ihr Hauptstudienfach an: </td>
                         <td><input id = "studyfieldBox" type="text" name = "studyfield"></td> 
                     </tr>
                     <tr>
-                        <td>Country of origin:</td>
+                        <td>Herkunftsland:</td>
                         <td><input id = "countryBox" type="text" name = "country"></td>
                     </tr>
                     <tr>
-                        <td>Mother tongue: </td>
+                        <td>Muttersprache: </td>
                         <td> <input id = "mothertongueBox" type="text" name = "mothertongue"></td>
                     </tr>
                     <tr>
-                        <td>If you mother tongue is not German, please state how many years you have lived in a German-speaking country:</td>
+                        <td>Wenn ihre Muttesprache nicht Deutsch ist, bitte geben Sie an wie viele Jahre Sie in einem deutsprachigen Land gelebt haben:</td>
                         <td><input id = "germanyearsBox" name = "germanyears"></td>
                     </tr>
                 </table>
@@ -68,10 +75,11 @@
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveInstructions' style="display:none">Welcome instructions</p>
 			<div id = 'divInstructionsHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
-                Welcome and thanks for coming!
-Please read every instructions displayed very carefully. If you don’t understand something raise your hand and the experimenter will come to you.
-You responses will be recorded, but your identity will never be revealed. That is, your name or other personal information will not be linked to your subjects number or to your responses.
-Your participation is voluntary. You can discontinue partcipation at any time.
+                Herzlich Willkommen zum Experiment!
+Bitte lesen Sie die nachstehenden Ausführungen gewissenhaft durch. Hier wird Ihnen alles mitgeteilt, was Sie für die Teilnahme am Experiment wissen müssen. 
+Falls Sie etwas nicht verstehen, melden Sie sich bitte. Ihre Frage wird dann an Ihrem Platz beantwortet. Das heutige Experiment untersucht kognitive Aspekte bei der Bearbeitung von Anagrammen. 
+Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erheben werden zudem vertraulich behandelt. Außerdem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzubrechen. 
+
 			</div>
 			<p id = 'txtBelowInstructions'>
                 <button id = "btnInstructions">Weiter</button>
