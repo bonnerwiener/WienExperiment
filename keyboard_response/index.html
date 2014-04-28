@@ -230,10 +230,12 @@ Your participation is voluntary. You can discontinue partcipation at any time.
 			<p id = 'txtAboveIntrinsic' style="display:none">Welcome Intrinsic</p>
 			<div id = 'divIntrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; border: 2px solid">
                 We tried to make the task as favorable for our participants as possible. Therefore we wanted to give you the choice of anagrams you are working with.
-                Please select a set of words that you want to use for this task:
-                1. Man and his environment
-                2. Animals and nature
-                3. Things of everyday use
+                Please select a set of words that you want to use for this task:</br></br>
+                <form id = "frmIntrinsic" style="display:inline;" method ="POST" action ="save_Demographic.php">
+                    <input type="radio" name="rdIntrinsic" value="1">1. Man and his environment</br>
+                    <input type="radio" name="rdIntrinsic" value="2">2. Animals and nature</br>
+                    <input type="radio" name="rdIntrinsic" value="3">3. Things of everyday use</br>
+                </form>
 			</div>
 			<p id = 'txtBelowIntrinsic'>
                 <button id = "btnIntrinsic">Weiter</button>
