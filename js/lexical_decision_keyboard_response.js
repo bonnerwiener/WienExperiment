@@ -18,7 +18,7 @@ var error_feedback = false
 var paradigm = 'press_key';
 var experiment_start_time = Date();
 var subject_nr 
-var trial_number = 0;
+var trial_number = 1;
 var stimuli_number
 var anagram
 var solution
@@ -157,12 +157,15 @@ document.getElementById("btnInstructions3").addEventListener("click",
         false);
 
 function start_experiment() {
+    $('#txtExperiment').text('Round '.concat(trial_number));
     document.getElementById('divExperiment').style.display = 'Inline';
 }
 
 document.getElementById("btnExperiment").addEventListener("click", 
         function() {
             if (true || round == 3 || round == 6) {
+            trial_number++;
+            $('#txtExperiment').text('Round '.concat(trial_number));
                 document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divManipulation').style.display = 'Inline'; }
             else if (round == 9){
